@@ -33,22 +33,22 @@
         <div class="main-ctn">
             <div class="navigation">
                 <ul>
-                    <button type="button" onclick="showhome()">
-                        <li><img src="svg/home/nav/home.svg" atl="">Home </li>
+                    <button type="button" onclick="showhome(); supermagic(0);clicked(this)">
+                        <li class="magic"><img src="svg/home/nav/home.svg" atl="" id="home-button">Home </li>
                     </button>
-                    <button type="button" onclick="dropdown()">
-                        <li><img src="svg/home/nav/orders.svg" atl=""> Orders</li>
+                    <button type="button" onclick="dropdown(); supermagic(1); clicked(this)">
+                        <li class="magic"><img src="svg/home/nav/orders.svg" atl="" id="orders-button"> Orders
+                            <img src="svg/home/nav/badge.svg" alt="" style="margin-left: 120px; width: 35px; margin-right: 0;">
+                        </li>
                     </button>
-                    <div class="dropdown-content">
-                        <button type="button" onclick="showorders()">
-                            <li>Orders</li>
+                    <div class="dropdown-content"  style="display: none;">
+                        <button type="button" onclick="showorders(); supermagic(2); clicked(this)">
+                            <li class="magic">Orders</li>
                         </button>
                         <li>Drafts</li>
                         <li>Submited</li>
-                    </div>
-                    <li><img src="svg/home/nav/products.svg" atl="">Products
-                        <img src="svg/home/nav/badge.svg" alt="" style="margin-left: 100px; width: 35px;">
-                    </li>
+                    </div>  
+                    <li><img src="svg/home/nav/products.svg" atl="">Products</li>
                     <li><img src="svg/home/nav/lineships.svg" atl="">Lineships</li>
                     <li><img src="svg/home/nav/pieces.svg" atl="">Pieces</li>
                     <li><img src="svg/home/nav/parcels.svg" atl="">Parcels</li>
@@ -60,7 +60,7 @@
                     <li class="setting"><img src="svg/home/nav/settings.svg" atl="">Settings</li>
                 </ul>
             </div>
-            <div class="middle-ctn" style="display: none;">
+            <div class="middle-ctn">
                 <div class="banner">
                     <div class="banner-content">
                         <li style="font-size: 22px; font-weight: 500;"><img src="svg/home/banner/i.svg" alt=""
@@ -109,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="outmost-card" style="display: none;">
+            <div class="outmost-card">
                 <div class="outmost-card-1">
                     <h2>Heading</h2>
                     <h4>Subheading</h4>
@@ -129,7 +129,7 @@
                 </div>
             </div>
             <!-- orders-ctn  -->
-            <div class="orders-ctn">
+            <div class="orders-ctn"  style="display: none;">
                 <div class="orders-ctn-heading">
                     <div class="orders-ctn-heading-1">Orders</div>
                     <div class="orders-ctn-heading-2">
@@ -154,8 +154,8 @@
                         <div>
                             <div class="orders-ctn-content-sub-bar">
                                 <form action="">
-                                   <img src="svg/orders/content/search.svg" alt="">
-                                   <input type="text" placeholder="Filter">
+                                    <img src="svg/orders/content/search.svg" alt="">
+                                    <input type="text" placeholder="Filter">
                                 </form>
                                 <div class="labels">
                                     <li>Label <img src="svg/home/topbar/arrow-down.svg"></li>
@@ -164,12 +164,58 @@
                                     <li>Label <img src="svg/home/topbar/arrow-down.svg"></li>
                                 </div>
                                 <li class="savebutton">
-                                    <img src="svg/orders/content/star.svg" alt="">Save</li>
+                                    <img src="svg/orders/content/star.svg" alt="">Save
+                                </li>
                             </div>
-                            <div class="orders-ctn-content-sub1"></div>
-                            <div class="orders-ctn-content-sub2"></div>
-                            <div class="orders-ctn-content-sub3"></div>
-                            <div class="orders-ctn-content-sub4"></div>
+                            <div class="orders-ctn-content-sub1">
+                                <div class="customer">
+                                    <input type="checkbox"> Showing 3 orders
+                                </div>
+                                <div class="total sort" style="width: 20%;">
+                                    <div style="margin-right: 5px; color: #6D7175;">Sort by</div>
+                                    <div style="margin-right: 45px;">Newest update</div>
+                                    <img src="svg/orders/content/select.svg">
+                                </div>
+                            </div>
+                            <div class="orders-ctn-content-sub2">
+                                <div class="customer">
+                                    <input type="checkbox"> <img src="svg/orders/content/avatar.svg" alt="">
+                                    <div class="info">
+                                        <li class="name">Seong-Hyeon Kavalioŭ</li>
+                                        <li class="country">Bucharest, Romania</li>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <li class="total-order">4 orders</li>
+                                    <li class="total-money">$108.12 spent</li>
+                                </div>
+                            </div>
+                            <div class="orders-ctn-content-sub3">
+                                <div class="customer">
+                                    <input type="checkbox"> <img src="svg/orders/content/avatar.svg" alt="">
+                                    <div class="info">
+                                        <li class="name">Seong-Hyeon Kavalioŭ</li>
+                                        <li class="country">Bucharest, Romania</li>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <li class="total-order">4 orders</li>
+                                    <li class="total-money">$108.12 spent</li>
+                                </div>
+                            </div>
+                            <div class="orders-ctn-content-sub4">
+                                <div class="customer">
+                                    <input type="checkbox"> <img src="svg/orders/content/avatar.svg" alt="">
+                                    <div class="info">
+                                        <li class="name">Seong-Hyeon Kavalioŭ</li>
+                                        <li class="country">Bucharest, Romania</li>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <li class="total-order">4 orders</li>
+                                    <li class="total-money">$108.12 spent</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,5 +224,6 @@
         </div>
     </main>
 </body>
-<script src="handle.js" ></script>
+<script src="handle.js"></script>
+
 </html>
