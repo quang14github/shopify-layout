@@ -794,6 +794,11 @@ main .main-ctn .orders-ctn-content-sub > div .orders-ctn-content-sub4 .customer 
   margin-right: 25px;
 }
 
+main .main-ctn .orders-ctn-content-sub > div .orders-ctn-content-sub1 .customer input, main .main-ctn .orders-ctn-content-sub > div .orders-ctn-content-sub2 .customer input, main .main-ctn .orders-ctn-content-sub > div .orders-ctn-content-sub3 .customer input, main .main-ctn .orders-ctn-content-sub > div .orders-ctn-content-sub4 .customer input {
+  width: 23px;
+  height: 23px;
+}
+
 main .main-ctn .orders-ctn-content-sub > div .orders-ctn-content-sub1 .total, main .main-ctn .orders-ctn-content-sub > div .orders-ctn-content-sub2 .total, main .main-ctn .orders-ctn-content-sub > div .orders-ctn-content-sub3 .total, main .main-ctn .orders-ctn-content-sub > div .orders-ctn-content-sub4 .total {
   list-style: none;
   -webkit-box-flex: 30%;
